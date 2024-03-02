@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{MATH 262 Linear Algebra
+Lecture Notes of Özgür Kişisel Week 1 }
+\author{Zehra Kaya}
+\date{February 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+\section{Free Vector Space Over a Set}
+
+\textbf{Definition 2.1: } Let $S$ be a set, $F$ be a field. The set $ \mathcal{F}(S)\subseteq Fun(S,F) $ such that 
+
+$\mathcal{F}(S) = \{f\in Fun(S,F) | f(s) = 0 \text{ except (possibly) for finitely many } s\}$\\
+
+Then $\mathcal{F}(S)$ is called the free vector space over $S$\\ \\
+\textbf{Proposition 2.1:} $ \mathcal{F}(S)$ is a subspace of $ Fun( S,F) $
+\subsection{Characteristic Function - Basis for $\mathcal{F}(S)$ }
+
+Let $S$ be any finite set with n elements and $F$ a field. Let $V = F un(S, F )$, the set of functions from $S$ to $F$, viewed as a vector space over $F$. For every $s \in S$, we can define a characteristic function $\mathcal{X}_s \in Fun(S, F )$ so that \\
+ $\mathcal{X}_s$ = 
+ $\begin{cases} 
+        0 & \text{if $s\neq s$} \\ 
+        1 & \text{otherwise} 
+    \end{cases}$
+
+Suppose that $S = \{s_1,s_2,...,s_n\}$. We claim that $B = \{\mathcal{X}_{s_1},\mathcal{X}_{s_2},...,\mathcal{X}_{s_n}\}$ is a basis for $V$ over $F$.
+Let us first show linear independence. Suppose that $c1\mathcal{X}_{s_1} +...+cn\mathcal{X}_{s_n} =0.$ This is an equality of functions. Applying both sides to $s_i$ gives $c_i = 0$.
+Since this is true for every $i$, we deduce that $B$ is linearly independent. Suppose now that $f \in Fun(S, F )$.
+We claim that $f =f(s_1)\mathcal{X}_{s_1} +f(s_2)\mathcal{X}_{s_2} +...+f(s_n)\mathcal{X}_{s_n}$
+
+\subsection{Universal Property of $\mathcal{F}(S)$ }
+\section{Tensor Product of Two Vector Spaces }
+\subsection{Bilinear Maps}
+Proposition
+
+\subsection{Universal Property of Tensor Product }
+
+\subsection{Dimension of a Tensor Product}
+\subsubsection{Theorem}
+
+\subsection{Symmetric Powers of a Vector Space}
+
+
+\end{document}
