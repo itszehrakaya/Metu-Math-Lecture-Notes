@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{MATH 262 Linear Algebra
+Lecture Notes of Özgür Kişisel Week 2}
+\author{Zehra Kaya}
+\date{February 2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+
+
+
+\paragraph{Proposition 1.1:} Suppose that $\{v_1,v_2,...,v_n\}$ is a basis for a vector space $V$ so that  $dim(V)=n $. 
+Then $\{v_iv_j\}_{1\leq i\leq j\leq n}$ is a basis for $Sym^2(V)$.\\
+
+In particular,  $dim(Sym^2(V))$ =$\frac{n(n+1)}{2}$.
+
+\paragraph{Proof:} 
+\section{Higher Symmetric Powers}
+\paragraph{Definition 2.1:} The $k^{th}$ symmetric power of a vector space $V$ is the quotient vector space $Sym^k(V) = V^{\otimes k}/\mathcal{U}$ where $\mathcal{U}$ is the subspace spanned by all vectors of the form $v^1\otimes v^2\otimes...\otimes( v\otimes w-w\otimes v) \otimes...\otimes v^k$ for all $v,w\in V$.
+
+\paragraph{Theorem 2.1:} Let $\{v_1,v_2,...,v_n\}$ be a basis for $V$. Then $B= \{v_{i_1}v_{i_2}...v_{i_k}\}_{1\leq i_1< i_2<...< i_k\leq n}$ is a basis for $Sym^k(V)$.\\
+
+
+
+
+\section{Exterior Powers / Alternating Powers}
+Assume $char(F)\neq 2$.\\
+\paragraph{Definition 3.1:}  Let $V$ be a vector space over $F$. The  second exterior (altenating) power of $V$ is  $\Lambda^2V = V^{\otimes k}/\mathcal{U}$ where $\mathcal{U}$ is the subspace spanned by all vectors of the form $v\otimes w + w\otimes v$.\\
+The equivalence class of $v\otimes w$ in $\Lambda^k V$ will be denoted by $v\wedge w$.\\
+
+$\overline{w\otimes v} = - \overline{v\otimes w} \implies w\wedge v = -v\wedge w  $ \\
+
+for any $v,w\in V,  \ v\wedge v = - v\wedge v \implies 2(v\wedge v)=0, v\wedge v =0 $.\\  
+\subsubsection{Universal Property of $\Lambda^2V$}
+Let $V, Z$ be a vector space over $F$. Suppose that and $\psi:V\times V \rightarrow Z$ is skew - symmetric bilinear map (altenating bilinear map) ( $\psi(v,w) = -\psi(w,v)$). 
+Then there is a unique linear transformation such that $T_\psi:\Lambda^2V\rightarrow Z$ such that $\psi = T_\psi \circ \phi $.\\
+where $\phi(v,w) = v\wedge w$.\\
+
+\paragraph{Theorem 3.1:} Let $\{v_1,v_2,...,v_n\}$ be a basis for $V$. Then $B= \{v_i \wedge v_j\}_{1\leq i< j \leq n}$ is a basis for $\Lambda^2V$.\\
+In particular, $dim(\Lambda^2V) = \frac{n(n-1)}{2}= {n \choose 2}$.\\
+
+\subsection{Higher Exterior Powers}
+Assume $char(F)\neq 2$.\\
+\paragraph{Definition 3.1.1:}  Let $V$ be a vector space over $F$. Say $k\geq 1$ is an integer. The  $k^{th}$ exterior power of $V$ is  $\Lambda^kV = V^{\otimes k}/\mathcal{U}$ where $\mathcal{U}$ is the subspace spanned by all vectors of the form $v^1\otimes v^2\otimes...\otimes( v\otimes w+w\otimes v) \otimes...\otimes v^k$. \\
+
+The equivalence class of $v^1\otimes v^2\otimes...\otimes v^k$ in $\Lambda^k V$ will be denoted by $v^1\wedge v^2\wedge...\wedge v^k$.\\
+\section{Digression on Permutations}
+\paragraph{Definition 4.1:} Let n be a positive integer. A permutation of n letters is a bijection.  $\sigma:\{1,2,...,n\}\rightarrow \{1,2,...,n\}$.\\
+\paragraph{Definition 4.2 ( Transposition ):}  A permutation T such that $T(i) = j, T(j) = i$ and $T(k) = k$ for all $k\neq i,j$ is called a transposition.\\
+If $j= i\mp 1$, then $T$ is called an adjacent transposition.\\
+\paragraph{Definition 4.3:} 
+$sgn(\sigma)$ = 
+$\begin{cases} 
+       +1 & \text{if $\sigma$ can be written as a product of an \textbf{even} number of transpositions} \\ 
+       -1 & \text{if $\sigma$ can be written as a product of an \textbf{odd} number of transpositions} 
+   \end{cases}$ 
+
+\section{Determinants}
+Proposition
+
+\subsection{Determinants of Elementary Matrices}
+
+\subsection{Effects of Elementary Row Operations on Determinants}
+
+
+\end{document}
