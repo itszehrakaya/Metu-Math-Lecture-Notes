@@ -1,0 +1,418 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[a4paper,
+            bindingoffset=0.2in,
+            left=0.5in,
+            right=0.5in,
+            top=0.5in,
+            bottom=0.5in,
+            footskip=.25in]{geometry}
+
+\title{Math 251 - Exercise Set 2 Zehra's Solutions}
+\begin{document}
+
+\maketitle
+% \tableofcontents
+\section{Theorems and Definitions that are used in the solutions} 
+\begin{itemize}
+    \item  $p \in \partial S$. $\iff$ for every $r > 0$, $B(p,r) \cap S \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^m \setminus S) \neq \emptyset$. \\
+
+\end{itemize}
+
+\section{Solutions}
+
+\begin{enumerate} \boldmath
+    \item Let $A \subseteq \mathbb{R}^n$ and $p \in \mathbb{R}^n$. Show that $p \in \bar A \Leftrightarrow B(p,\varepsilon) \cap A \neq \emptyset$ for all $\varepsilon > 0$.\\ 
+   
+    \item % question 2
+
+\begin{enumerate}
+    \item Show that $\mathbb{R}^n$ is an open set by using the definition of open sets.\\
+    % 2a
+    
+\textbf{Proof:} \\
+Let $p \in \mathbb{R}^n$. \\
+Then for every $r > 0$, $B(p,r) \subseteq \mathbb{R}^n$. \\
+Thus $\mathbb{R}^n$ is an open set.\\
+
+    \item Show that $\mathbb{R}^n$  is a closed subset of $\mathbb{R}^n$  by using problem 1.\\% 2b
+
+\textbf{Proof:} \\
+Let $p \in \partial \mathbb{R}^n$. \\
+Then for every $r > 0$, $B(p,r) \cap \mathbb{R}^n \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus \mathbb{R}^n) \neq \emptyset$. \\
+Then $B(p,r) \cap \mathbb{R}^n \neq \emptyset$ and $B(p,r) \cap \emptyset \neq \emptyset$. \\
+Thus $p \in \mathbb{R}^n$. \\
+Thus $\mathbb{R}^n$ is a closed subset of $\mathbb{R}^n$.\\
+\end{enumerate}
+
+
+    \item   Show that the empty set $\emptyset$ is both an open and a closed subset of $\mathbb{R}^n$.\\ % question 3
+    
+\textbf{Proof:} \\ 
+Let $p \in \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap \emptyset = \emptyset$. \\
+Thus $\emptyset$ is an open subset of $\mathbb{R}^n$.\\
+Let $p \in \partial \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap \emptyset \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus \emptyset) \neq \emptyset$. \\
+Then $B(p,r) \cap \emptyset \neq \emptyset$ and $B(p,r) \cap \mathbb{R}^n \neq \emptyset$. \\
+Thus $p \in \emptyset$. \\
+Thus $\emptyset$ is a closed subset of $\mathbb{R}^n$.\\
+(\textbf{Note:} As we can see from problems 2 and 3, $\emptyset$ and $\mathbb{R}^n$ are both open and closed subsets of $\mathbb{R}^n$.)\\
+
+\item % question 4
+
+
+\begin{enumerate}
+    \item  Let A and B be subsets of $\mathbb{R}^n$. If A and B are closed then show that both $A \cap B$ and $A \cup B$ are closed as well.\\ % 4a
+    
+\textbf{Proof:} \\
+Let $p \in \partial A \cap \partial B$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$ and $B(p,r) \cap B \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus B) \neq \emptyset$. \\
+Then $B(p,r) \cap (A \cap B) \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus (A \cap B)) \neq \emptyset$. \\
+Thus $p \in \partial (A \cap B)$. \\
+Thus $A \cap B$ is a closed subset of $\mathbb{R}^n$.\\
+    \item If $\{A_i\}_{i\in I}$ is a collection of closed subsets of $\mathbb{R}^n$ then show that $\bigcap_{i\in I} A_i$ is closed, too.\\ % 4b
+
+\textbf{Proof:} \\
+Let $p \in \bigcap_{i\in I} \partial A_i$. \\
+Then for every $r > 0$, $B(p,r) \cap A_i \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A_i) \neq \emptyset$ for all $i \in I$. \\
+Then $B(p,r) \cap \bigcap_{i\in I} A_i \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus \bigcap_{i\in I} A_i) \neq \emptyset$. \\
+Thus $p \in \partial \bigcap_{i\in I} A_i$. \\
+Thus $\bigcap_{i\in I} A_i$ is a closed subset of $\mathbb{R}^n$.\\
+
+    
+\end{enumerate} % question 5
+
+    \item Let $A,B \subseteq \mathbb{R}^n$. Prove the following:\\ % question 5
+\begin{enumerate}
+
+    \item int(int(A)) = int(A), \\ % 5a
+
+\textbf{Proof:} \\
+Let $p \in \text{int}(\text{int}(A))$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq \text{int}(A)$. \\
+Thus $p \in \text{int}(A)$. \\
+Thus $\text{int}(\text{int}(A)) \subseteq \text{int}(A)$.\\
+Let $p \in \text{int}(A)$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A$. \\
+Because $B(p,r) \subseteq A$, $B(p,r) \subseteq \text{int}(A)$. \\
+Thus $p \in \text{int}(\text{int}(A))$. \\
+    \item $\overline{(\overline{A})} = \overline A$, 
+    
+\textbf{Proof:} \\
+Let $p \in \overline{\overline{A}}$. \\
+Then for every $r > 0$, $B(p,r) \cap \overline{A} \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$. \\
+Then $p \in \overline{A}$. \\
+Thus $\overline{\overline{A}} \subseteq \overline{A}$.\\
+Let $p \in \overline{A}$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap \overline{A} \neq \emptyset$. \\
+Then $p \in \overline{\overline{A}}$. \\
+Thus $\overline{A} \subseteq \overline{\overline{A}}$.\\
+    \item $(A \cap B)^\circ = A^\circ \cap B^\circ$,
+    
+\textbf{Proof:} \\
+Let $p \in (A \cap B)^\circ$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A \cap B$. \\
+Then there exists $s > 0$ such that $B(p,s) \subseteq A$ and $B(p,s) \subseteq B$. \\
+Then $p \in A^\circ$ and $p \in B^\circ$. \\
+Thus $p \in A^\circ \cap B^\circ$. \\
+Thus $(A \cap B)^\circ \subseteq A^\circ \cap B^\circ$.\\
+    \item $R^n = A^\circ \cup \partial A \cup \text{ext}(A)$, where $A^\circ \cap \partial A = \emptyset$, $A^\circ \cap \text{ext}(A) = \emptyset$,$\partial A \cap \text{ext}(A) = \emptyset$, 
+    
+\textbf{Proof:} \\
+Let $p \in \mathbb{R}^n$. \\
+Then $p \in A^\circ$ or $p \in \partial A$ or $p \in \text{ext}(A)$. \\
+Thus $\mathbb{R}^n = A^\circ \cup \partial A \cup \text{ext}(A)$.\\
+Let $p \in A^\circ \cap \partial A$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then $p \in \text{ext}(A)$. \\
+Thus $A^\circ \cap \partial A = \emptyset$.\\
+
+    \item $\overline{A\cup B}=\overline A\cup \overline B$,  
+    
+\textbf{Proof:} \\
+Let $p \in \overline{A\cup B}$. \\
+Then for every $r > 0$, $B(p,r) \cap (A \cup B) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ or $B(p,r) \cap B \neq \emptyset$. \\
+Then $p \in \overline A$ or $p \in \overline B$. \\
+Thus $p \in \overline A \cup \overline B$. \\
+Thus $\overline{A\cup B} \subseteq \overline A \cup \overline B$.\\
+
+    \item $\overline A=\bigcap \{K\subseteq \mathbb{R}^n |K \text{ is closed and } A\subseteq K\}$
+    
+\textbf{Proof:} \\
+Let $p \in \overline A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$. \\
+Let $K$ be a closed subset of $\mathbb{R}^n$ such that $A \subseteq K$. \\
+Then for every $r > 0$, $B(p,r) \cap K \neq \emptyset$. \\
+Then $p \in K$. \\
+Thus $\overline A \subseteq K$. \\
+Thus $\overline A \subseteq \bigcap \{K\subseteq \mathbb{R}^n |K \text{ is closed and } A\subseteq K\}$.\\
+Let $p \in \bigcap \{K\subseteq \mathbb{R}^n |K \text{ is closed and } A\subseteq K\}$. \\
+Then for every $r > 0$, $B(p,r) \cap K \neq \emptyset$ for all $K \subseteq \mathbb{R}^n$ such that $K$ is closed and $A \subseteq K$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$. \\
+Thus $p \in \overline A$. \\
+Thus $\bigcap \{K\subseteq \mathbb{R}^n |K \text{ is closed and } A\subseteq K\} \subseteq \overline A$.\\
+
+    \item A is open $\Leftrightarrow$ A $\cap$ $\partial$A = $\emptyset$.
+
+\textbf{Proof:} \\
+$\Rightarrow$ Suppose A is open. \\
+Let $p \in A \cap \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then $p \in \partial A$. \\
+Thus $A \cap \partial A = \emptyset$.\\
+$\Leftarrow$ Suppose A $\cap$ $\partial$A = $\emptyset$. \\
+Let $p \in A$. \\
+Then for every $r > 0$, $B(p,r) \subseteq A$. \\
+Thus A is open.\\
+
+    
+
+
+\end{enumerate} 
+\item  Let $A,B \subseteq \mathbb{R}^n$. Determine if each of the following holds. If it does prove it. Otherwise give a counterexample.
+\begin{enumerate}
+    \item $(A \cup B)^\circ \subseteq A^\circ \cup B^\circ$, \\
+    
+\textbf{Proof:} \\
+Let $p \in (A \cup B)^\circ$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A \cup B$. \\
+Then there exists $s > 0$ such that $B(p,s) \subseteq A$ or $B(p,s) \subseteq B$. \\
+Then $p \in A^\circ$ or $p \in B^\circ$. \\
+Thus $(A \cup B)^\circ \subseteq A^\circ \cup B^\circ$.\\
+
+
+    \item  $A^\circ \cup B^\circ \subseteq (A \cup B)^\circ$, \\
+    
+\textbf{Proof:} \\
+Let $p \in A^\circ \cup B^\circ$. \\
+Then $p \in A^\circ$ or $p \in B^\circ$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A$ or $B(p,r) \subseteq B$. \\
+Then $B(p,r) \subseteq A \cup B$. \\
+Thus $A^\circ \cup B^\circ \subseteq (A \cup B)^\circ$.\\
+
+    \item  $A \cap B \subseteq (A \cap B)$, \\
+    
+\textbf{Proof:} \\
+Let $p \in A \cap B$. \\
+Then $p \in A$ and $p \in B$. \\
+Thus $p \in A \cap B$. \\
+Thus $A \cap B \subseteq (A \cap B)$.\\
+
+    
+    \item $(A \cap B) \subseteq A \cap B$\\
+    
+\textbf{Proof:} \\
+Let $p \in (A \cap B)$. \\
+Then $p \in A$ and $p \in B$. \\
+Thus $p \in A \cap B$. \\
+Thus $(A \cap B) \subseteq A \cap B$.\\
+
+    
+    \item If $A \subseteq B$ then $\partial A \subseteq \partial B$,\\
+    
+\textbf{Proof:} \\
+$\Rightarrow$ Suppose $A \subseteq B$. \\
+Let $p \in \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus B) \neq \emptyset$. \\
+Then $p \in \partial B$. \\
+Thus $\partial A \subseteq \partial B$.\\
+$\Leftarrow$ Suppose $\partial A \subseteq \partial B$. \\
+Let $p \in \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus B) \neq \emptyset$. \\
+Then $p \in \partial B$. \\
+Thus $\partial A \subseteq \partial B$.\\
+
+    \item If $A \subseteq B$ then $\text{ext}(A) \subseteq \text{ext}(B)$,\\
+    
+\textbf{Proof:} \\
+$\Rightarrow$ Suppose $A \subseteq B$. \\
+Let $p \in \text{ext}(A)$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus B) \neq \emptyset$. \\
+Then $p \in \text{ext}(B)$. \\
+Thus $\text{ext}(A) \subseteq \text{ext}(B)$.\\
+$\Leftarrow$ Suppose $\text{ext}(A) \subseteq \text{ext}(B)$. \\
+Let $p \in \text{ext}(A)$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus B) \neq \emptyset$. \\
+Then $p \in \text{ext}(B)$. \\
+Thus $\text{ext}(A) \subseteq \text{ext}(B)$.\\
+
+    
+    \item A is closed $\Leftrightarrow \partial A \subseteq A$,\\
+    
+
+\textbf{Proof:} \\
+$\Rightarrow$ Suppose A is closed. \\
+Let $p \in \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then $p \in A$. \\
+Thus $\partial A \subseteq A$.\\
+$\Leftarrow$ Suppose $\partial A \subseteq A$. \\
+Let $p \in \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then $p \in A$. \\
+Thus $\partial A \subseteq A$.\\
+
+    
+    \item If $A \subseteq B$ then $A' \subseteq B'$,\\ 
+    
+\textbf{Proof:} \\
+$\Rightarrow$ Suppose $A \subseteq B$. \\
+Let $p \in A'$. \\
+Then for every $r > 0$, $B(p,r) \cap A \setminus \{p\} \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \setminus \{p\} \neq \emptyset$. \\
+Then $p \in B'$. \\
+Thus $A' \subseteq B'$.\\
+$\Leftarrow$ Suppose $A' \subseteq B'$. \\
+Let $p \in A'$. \\
+Then for every $r > 0$, $B(p,r) \cap A \setminus \{p\} \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap B \setminus \{p\} \neq \emptyset$. \\
+Then $p \in B'$. \\
+Thus $A' \subseteq B'$.\\
+
+    
+    \item $int(A) = A^\circ$,\\
+    
+\textbf{Proof:} \\
+Let $p \in \text{int}(A)$. \\
+Then there exists $r > 0$ such that $B(p,r) \subseteq A$. \\
+Then $p \in A^\circ$. \\
+Thus $\text{int}(A) = A^\circ$.\\
+
+    
+    \item $\partial A \subseteq A'$.\\
+    
+\textbf{Proof:} \\
+Let $p \in \partial A$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap A \setminus \{p\} \neq \emptyset$. \\
+Then $p \in A'$. \\
+Thus $\partial A \subseteq A'$.\\
+
+    
+    \item $\partial(A) \subseteq \partial A$ (Hint: If $B \subseteq \mathbb{R}^n$, then $\partial B = B \cap \mathbb{R}^n \setminus B$).\\
+    
+\textbf{Proof:} \\
+Let $p \in \partial(A)$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then for every $r > 0$, $B(p,r) \cap A \neq \emptyset$ and $B(p,r) \cap (\mathbb{R}^n \setminus A) \neq \emptyset$. \\
+Then $p \in \partial A$. \\
+
+    
+
+ 
+
+\end{enumerate}
+\item Find the interior, exterior, closure, boundary, derived set and the set of isolated points for the following sets :
+\begin{enumerate}
+    \item $\emptyset$, $\mathbb{R}^n$\\
+    
+\textbf{Solution:} \\
+$\text{int}(\emptyset) = \emptyset$, $\text{ext}(\emptyset) = \mathbb{R}^n$, $\overline{\emptyset} = \emptyset$, $\partial \emptyset = \emptyset$, $I(\emptyset) = \emptyset$, $\emptyset' = \emptyset$.\\
+    
+    
+    \item  Any finite subset A of Euclidean n-space.\\
+    
+\textbf{Solution:} \\
+$\text{int}(A) = \emptyset$, $\text{ext}(A) = \mathbb{R}^n$, $\overline{A} = A$, $\partial A = A$, $I(A) = A$, $A' = A$.\\
+
+    
+    \item  ($-1$, 5) $\subseteq$ R,\\
+    
+\textbf{Solution:} \\
+$\text{int}((-1,5)) = (-1,5)$, $\text{ext}((-1,5)) = \mathbb{R} \setminus [-1,5]$, $\overline{(-1,5)} = [-1,5]$, $\partial (-1,5) = \{-1,5\}$, $I((-1,5)) = \emptyset$, $(-1,5)' = \{-1,5\}$.\\
+
+    
+    \item $S=\{(x,y) \mid -1<x<5, y=0\}$ in $\mathbb{R}^2$, i.e. the interval $(-1,5)$ on the $x$-axis in the plane.
+    the plane,\\
+
+\textbf{Solution:} \\
+$\text{int}(S) = \emptyset$, $\text{ext}(S) = \mathbb{R}^2 \setminus [-1,5]$, $\overline{S} = S \cup \{(-1,0),(5,0)\}$, $\partial S = \{(-1,0),(5,0)\}$, $I(S) = \emptyset$, $S' = \{(-1,0),(5,0)\}$.\\
+
+
+    \item $R^2 \setminus \{(0, 0)\}$,\\
+    
+\textbf{Solution:} \\
+$\text{int}(R^2 \setminus \{(0, 0)\}) = R^2 \setminus \{(0, 0)\}$, $\text{ext}(R^2 \setminus \{(0, 0)\}) = \{(0,0)\}$, $\overline{R^2 \setminus \{(0, 0)\}} = R^2$, $\partial (R^2 \setminus \{(0, 0)\}) = \{(0,0)\}$, $I(R^2 \setminus \{(0, 0)\}) = \emptyset$, $(R^2 \setminus \{(0, 0)\})' = \{(0,0)\}$.\\
+    
+    \item A = $\{(x, y, z) \in \mathbb{R}^3 | 0 \leq x < 1, y^2 + z^2 \leq 1\}$.\\
+    
+\textbf{Solution:} \\
+$\text{int}(A) = \{(x, y, z) \in \mathbb{R}^3 | 0 \leq x < 1, y^2 + z^2 < 1\}$, $\text{ext}(A) = \{(x, y, z) \in \mathbb{R}^3 | x < 0 \text{ or } x \geq 1 \text{ or } y^2 + z^2 > 1\}$, $\overline{A} = \{(x, y, z) \in \mathbb{R}^3 | 0 \leq x \leq 1, y^2 + z^2 \leq 1\}$, $\partial A = \{(x, y, z) \in \mathbb{R}^3 | x = 0 \text{ or } x = 1, y^2 + z^2 = 1\}$, $I(A) = \emptyset$, $A' = \{(x, y, z) \in \mathbb{R}^3 | x = 0 \text{ or } x = 1, y^2 + z^2 = 1\}$.\\
+    
+    \item For $a \in \mathbb{R}$, $A=\{(x,y) \in \mathbb{R}^2 \mid x=a, a<y<1\}$.\\
+    
+\textbf{Solution:} \\
+$\text{int}(A) = \emptyset$, $\text{ext}(A) = \mathbb{R}^2 \setminus \{(a,y) \in \mathbb{R}^2 \mid a<y<1\}$, $\overline{A} = \{(x,y) \in \mathbb{R}^2 \mid x=a, a \leq y \leq 1\}$, $\partial A = \{(a,y) \in \mathbb{R}^2 \mid a=y \text{ or } y=1\}$, $I(A) = \emptyset$, $A' = \{(a,y) \in \mathbb{R}^2 \mid a=y \text{ or } y=1\}$.\\
+    
+
+\end{enumerate}
+    \item Let \\
+    
+    $A=\{(x,y)|-2\leq x\leq 2 \text{ with } x\neq 0, 0<y\leq 4\} \cup \{(0,y)|0<y<1 \text{ or } 3<y\leq 4\} \cup \{(3,0),(4,0)\}$.
+
+\begin{enumerate}
+
+\item Find the interior $A^\circ$ of $A$. Is $A$ an open set? Why?\\
+
+\textbf{Solution:} \\
+$A^\circ = \{(x,y) \in \mathbb{R}^2 |-2<x<2 \text{ with } x\neq 0, 0<y<4\} \cup \{(0,y) | 0<y<1 \text{ or } 3<y<4\} \cup \{(3,0),(4,0)\}$. \\
+$A$ is not an open set because $A$ contains some of its boundary points.\\
+
+
+\item Write $\mathbb{R}^2 \setminus A$.\\
+
+\textbf{Solution:} \\
+$\mathbb{R}^2 \setminus A = \{(x,y) \in \mathbb{R}^2 | x<-2 \text{ or } x>2 \text{ or } x=0 \text{ and } 0<y\leq 1 \text{ or } 3<y<4 \text{ or } x=3 \text{ or } x=4 \text{ and } y=0\}$.\\
+
+\item Write the formula for the exterior of a set and use it to find ext(A).\\
+
+\textbf{Solution:} \\
+$\text{ext}(A) = \mathbb{R}^2 \setminus \overline{A} = \mathbb{R}^2 \setminus A$.\\
+
+\item  Write the formula for the boundary $\partial A$ of A and use it to find $\partial A$. Is A a closed set? Why?\\
+
+\textbf{Solution:} \\
+$\partial A = \overline{A} \cap \overline{(\mathbb{R}^2 \setminus A)} = \overline{A} \cap \overline{A} = \overline{A}$. \\
+$A$ is a closed set because $A$ contains all of its boundary points.\\
+
+\item Write a formula for the closure of A and use it to find A.\\
+
+\textbf{Solution:} \\
+$\overline{A} = A$.\\
+
+\item Find the set $I(A)$ of all isolated points of $A$.\\
+
+\textbf{Solution:} \\
+$I(A) = \emptyset$.\\
+
+\item Find the derived set $A^\prime$ of A.\\
+
+\textbf{Solution:} \\
+$A^\prime = \emptyset$.\\
+since $A^\circ = A$ and $A^\prime = \emptyset$, $A$ is not a perfect set.\\
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\end{document}
